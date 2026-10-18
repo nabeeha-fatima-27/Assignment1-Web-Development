@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Collagenix Industries</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Parallax Hero Section -->
+    <div class="parallax-sec about-hero-sec">
+        <header class="navbar">
+            <div class="logo">
+                <span class="logo-title">Collagenix</span>
+                <span class="logo-subtitle">Industries</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item active">About</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="#" class="nav-item">Products</a>
+                <a href="#" class="nav-item">Contact</a>
+                <a href="#" class="cta-btn">Take Action</a>
+            </nav>
+        </header>
+        <section class="hero-content">
+            <h1 class="page-title">About Us</h1>
+        </section>
+    </div>
+
+    <!-- Main Content & Live Counter Section -->
+    <section class="about-main-section">
+        <div class="about-main-container">
+            
+            <!-- Top Text Blocks -->
+            <div class="about-top-grid">
+                <div class="about-left-col">
+                    <span class="section-subtitle">High Quality Collagen & Adhesive Solutions</span>
+                    <h2>Finding A Permanent Solution Is Our Ultimate Goal!</h2>
+                </div>
+                <div class="about-right-col">
+                    <h3>Since 1995, Our Team Has Succeeded In Understanding The Needs Of The Industry And Creating Reliable Products To Serve Them All.</h3>
+                    <p>Specializing in high-grade edible and pharmaceutical gelatins along with high-tack natural animal hide glues, we engineer superior natural polymer solutions for global industrial applications.</p>
+                    <p>From strict quality controls ensuring exact Bloom strengths to eco-friendly extraction processes, our facility delivers dependable batch consistency tailored to your standards.</p>
+                </div>
+            </div>
+
+            <!-- Numbers Speak For Themselves / Live Counters -->
+            <div class="counter-section">
+                <div class="counter-left">
+                    <span class="section-subtitle">Some Cool Facts</span>
+                    <h2>Numbers Speak For Themselves</h2>
+                </div>
+                
+                <div class="counters-right">
+                    <div class="counter-box">
+                        <span class="counter-number" data-target="150">0</span>
+                        <span class="counter-label">Products</span>
+                    </div>
+                    <div class="counter-box">
+                        <span class="counter-number" data-target="15">0</span>
+                        <span class="counter-label">Years of Experience</span>
+                    </div>
+                    <div class="counter-box">
+                        <span class="counter-number" data-target="250">0</span>
+                        <span class="counter-label">Completed Projects</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Additional Features / Quality Control Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <div class="features-header">
+                <h2>Quality Comes First! We Make Sure That Every Minute Detail Is Looked Into While Manufacturing Even The Smallest Product. Our Focus Is 100% On Client Needs And Satisfaction.</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-col">
+                    <h3>Innovative Solutions</h3>
+                    <p>Advanced extraction and hydrolysis techniques designed to maximize protein purity, gelling strength, and adhesive tackiness for specialized manufacturing requirements.</p>
+                </div>
+                <div class="feature-col">
+                    <h3>Quality Unsurpassed</h3>
+                    <p>Rigorous laboratory testing across every batch ensures compliance with international pharmaceutical, food-grade, and industrial adhesive safety standards.</p>
+                </div>
+                <div class="feature-col feature-highlight">
+                    <h3>We Are The Creators You Can Trust On For A Perfect Solution To All Your Needs.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-banner-section">
+        <div class="cta-banner-container">
+            <h2>Need Help with Easier Industrial Solutions? We Are Experts!</h2>
+            <a href="#contact" class="banner-cta-btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-col footer-about">
+                <p>Masters in high-grade gelatin and natural adhesive manufacturing with 25 years of experience and 10+ industry awards!</p>
+            </div>
+            <div class="footer-col">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Pharmaceutical Gelatin</a></li>
+                    <li><a href="#">Edible Gelatin</a></li>
+                    <li><a href="#">Technical Hide Glue</a></li>
+                    <li><a href="#">Collagen Peptides</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Applications</h3>
+                <ul>
+                    <li><a href="#">Capsule Manufacturing</a></li>
+                    <li><a href="#">Confectionery</a></li>
+                    <li><a href="#">Woodworking</a></li>
+                    <li><a href="#">Bookbinding</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Collagenix Industries</p>
+            <p>Powered by Collagenix Industry</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Live Counter Animation -->
+    <script>
+        const counters = document.querySelectorAll('.counter-number');
+        let animated = false;
+
+        function runCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 50; // Controls counting speed
+
+                function updateCount() {
+                    count += speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+                updateCount();
+            });
+        }
+
+        // Trigger animation when scrolled into view
+        window.addEventListener('scroll', () => {
+            const counterSection = document.querySelector('.counter-section');
+            const sectionPosition = counterSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            if (sectionPosition < screenPosition && !animated) {
+                runCounters();
+                animated = true;
+            }
+        });
+    </script>
+</body>
+</html>
