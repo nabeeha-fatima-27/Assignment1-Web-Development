@@ -145,8 +145,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Live Counter Animation -->
-    <script>
+
+    <!-- <script>
         const counters = document.querySelectorAll('.counter-number');
         let animated = false;
 
@@ -180,6 +180,26 @@
                 animated = true;
             }
         });
-    </script>
+    </script> -->
+    <div id="quoteModal" class="modal-overlay">
+    <div class="modal-box">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2>Request an Industrial Quote</h2>
+        <p>Tell us your required Bloom strength, grade, or volume.</p>
+        <form id="quoteForm">
+            <input type="text" placeholder="Your Name / Company" required>
+            <input type="email" placeholder="Business Email" required>
+            <select required>
+                <option value="">Select Product Category...</option>
+                <option value="pharma">Pharmaceutical & Edible Gelatin</option>
+                <option value="glue">Technical Hide Glue</option>
+                <option value="peptides">Hydrolyzed Collagen Peptides</option>
+            </select>
+            <textarea rows="3" placeholder="Specifications (e.g., 250 Bloom, 500 kg)" required></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+        </form>
+    </div>
+</div>
+<script src="about.js"></script>
 </body>
 </html>
