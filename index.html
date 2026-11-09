@@ -43,11 +43,11 @@
             <p class="about-description">
                 From stringent quality controls ensuring exact Bloom strengths to eco-friendly extraction processes, our facility delivers dependable batch consistency tailored to your industrial standards.
             </p>
-            <a href="#" class="about-btn">Learn More</a>
+            <a href="about.html" class="about-btn">Learn More</a>
         </div>
     </section>
 
-    <section class="products-parallax-sec">
+    <section id="products" class="products-parallax-sec">
         <div class="products-container">
             <div class="products-left">
                 <span class="section-subtitle">Our Products</span>
@@ -71,7 +71,7 @@
 
             <div class="products-right">
                 <h2>The ultimate source for pure gelatin and high-strength bio-adhesives tailored to your exact needs.</h2>
-                <a href="#contact" class="products-cta-btn">Learn More</a>
+                <a href="products.html" class="products-cta-btn">Learn More</a>
             </div>
         </div>
     </section>
@@ -114,11 +114,11 @@
     <section class="cta-banner-section">
         <div class="cta-banner-container">
             <h2>Need Help with Custom Collagen & Adhesive Solutions? We Are Experts!</h2>
-            <a href="#contact" class="banner-cta-btn">Learn More</a>
+            <a href="about.html" class="banner-cta-btn">Learn More</a>
         </div>
     </section>
 
-    <footer class="footer-section">
+    <footer id="contact" class="footer-section">
         <div class="footer-container">
             <div class="footer-col footer-about">
                 <p>Masters in high-grade gelatin and natural adhesive manufacturing with 25 years of experience and 10+ industry awards!</p>
@@ -164,6 +164,25 @@
             <p>Powered by Collagenix Industry</p>
         </div>
     </footer>
-
+    <div id="quoteModal" class="modal-overlay">
+    <div class="modal-box">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2>Request an Industrial Quote</h2>
+        <p>Tell us your required Bloom strength, grade, or volume.</p>
+        <form id="quoteForm">
+            <input type="text" placeholder="Your Name / Company" required>
+            <input type="email" placeholder="Business Email" required>
+            <select required>
+                <option value="">Select Product Category...</option>
+                <option value="pharma">Pharmaceutical & Edible Gelatin</option>
+                <option value="glue">Technical Hide Glue</option>
+                <option value="peptides">Hydrolyzed Collagen Peptides</option>
+            </select>
+            <textarea rows="3" placeholder="Specifications (e.g., 250 Bloom, 500 kg)" required></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+        </form>
+    </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
