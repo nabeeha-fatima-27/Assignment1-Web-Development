@@ -107,6 +107,25 @@
             <p>Powered by Collagenix Industry</p>
         </div>
     </footer>
-
+    <div id="quoteModal" class="modal-overlay">
+        <div class="modal-box">
+            <span id="closeModal" class="close-btn">&times;</span>
+            <h2>Request Product Specifications / Quote</h2>
+            <p>Select your product grade and enter required volume or Bloom strength.</p>
+            <form id="quoteForm">
+                <input type="text" placeholder="Your Name / Company" required>
+                <input type="email" placeholder="Business Email" required>
+                <select id="productSelect" required>
+                    <option value="">Select Product Category...</option>
+                    <option value="gelatin">Certified Halal Gelatin</option>
+                    <option value="glue">Technical Hide Glue</option>
+                </select>
+                <textarea rows="3" placeholder="Specifications (e.g., 250 Bloom, 500 kg)" required></textarea>
+                <button type="submit" class="modal-submit-btn">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="products.js"></script>
 </body>
 </html>
