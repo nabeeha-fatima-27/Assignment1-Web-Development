@@ -1,45 +1,22 @@
-const navbar = document.querySelector('.navbar');
+const modal = document.getElementById('quoteModal');
+const closeBtn = document.getElementById('closeModal');
+const quoteForm = document.getElementById('quoteForm');
+const ctaButtons = document.querySelectorAll('.cta-btn');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        
-        if (targetId === '#') return;
-
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-            e.preventDefault();
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
+ctaButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (modal) {
+            modal.classList.add('active');
         }
     });
 });
 
-const modal = document.getElementById('quoteModal');
-const closeBtn = document.getElementById('closeModal');
-const quoteForm = document.getElementById('quoteForm');
-
-const quoteButtons = document.querySelectorAll('.cta-btn, .btn-secondary');
-
-quoteButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
     });
-});
-
-closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-});
+}
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -47,9 +24,11 @@ window.addEventListener('click', (e) => {
     }
 });
 
-quoteForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you! Your inquiry has been received by Collagenix Industries. Our technical team will contact you shortly.');
-    quoteForm.reset();
-    modal.classList.remove('active');
-});
+if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your inquiry has been received by Collagenix Industries. Our technical team will contact you shortly.');
+        quoteForm.reset();
+        modal.classList.remove('active');
+    });
+}
